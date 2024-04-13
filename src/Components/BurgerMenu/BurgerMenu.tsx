@@ -1,6 +1,6 @@
 import Navbar from "../Navbar/Navbar";
 import { useAppContext } from "../../Provider/ContextProvider";
-import { delay, motion as m, transform } from "framer-motion";
+import { motion as m } from "framer-motion";
 export default function BurgerMenu() {
   const {
     state: { isBurgerMenuOpen },
