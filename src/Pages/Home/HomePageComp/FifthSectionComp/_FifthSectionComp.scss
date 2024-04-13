@@ -1,0 +1,64 @@
+.fifth-section-comp {
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+
+.fifth-section-comp .container {
+  height: 100%;
+}
+
+.fifth-section-comp video {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.fifth-section-comp .info {
+  position: relative;
+  z-index: 1;
+  //   background-color: red;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fifth-section-comp .info div:where(.left, .right) {
+  height: 50vh;
+  flex: 1;
+  flex-shrink: 0;
+  //   background-color: bisque;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  p {
+    padding: 0.8rem 0 0.5rem 0.5rem;
+    background-color: rgba(var(--primary-colorRgb), 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 0.5rem;
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    max-width: 20ch;
+  }
+}
+
+.fifth-section-comp .info div:where(.right) {
+  align-items: flex-end;
+}
+
+@media (width > 900px) {
+  .fifth-section-comp .info div:where(.left, .right) {
+    // background-color: blue;
+    align-items: center;
+    p {
+      background-color: transparent;
+    }
+  }
+}

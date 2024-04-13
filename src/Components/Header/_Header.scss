@@ -1,0 +1,107 @@
+header {
+  background-color: rgba(var(--white-color-rgb), 0.4);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+@media (device-type: iphone), (device-type: ipad) {
+  header {
+    background-color: var(
+      --white-color-rgb
+    ); /* Replace with your white color value */
+    backdrop-filter: none; /* Explicitly set to none for clarity */
+  }
+}
+header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .logo svg {
+  fill: var(--primary-color);
+  width: 16px;
+  height: 16px;
+}
+
+header .container .logo a {
+  font-size: 1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  svg {
+    transition: all 0.3s ease;
+  }
+}
+
+header .container .logo a:hover {
+  color: var(--blue-color);
+  svg {
+    fill: var(--blue-color);
+  }
+}
+
+header .container .logo a:active {
+  color: var(--blue-dark-color);
+  scale: 0.9;
+}
+
+header > .container > nav {
+  display: none;
+}
+
+@media (width >= 768px) {
+  header > .container > nav {
+    display: block;
+  }
+
+  header > .container .menu {
+    display: none;
+  }
+}
+
+header > .container > nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header > .container > nav ul a {
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+  //   background-color: red;
+  transition: all 0.5s ease;
+  border-bottom: 1px solid transparent;
+}
+
+header > .container > nav ul a:hover {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+header > .container > nav ul a:active {
+  border-bottom: 1px solid var(--primary-color);
+  scale: 0.9;
+}
+
+header > .container > nav button {
+  padding: 0.15rem 2rem;
+  font-size: 0.6rem;
+  color: white;
+  background: var(--blue-color);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+header > .container > nav button:hover {
+  background: var(--blue-dark-color);
+}
+
+header > .container > nav button:active {
+  background: var(--blue-color);
+  scale: 0.9;
+}

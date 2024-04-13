@@ -1,0 +1,41 @@
+.second-page-comp {
+  position: relative;
+  height: 125vh;
+}
+
+.second-page-comp video {
+  height: 100%;
+}
+
+.second-page-comp .container {
+  //   border: 1px solid red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  overflow: hidden;
+  width: max-content;
+}
+
+.second-page-comp .content {
+  max-width: 30ch;
+}
+.second-page-comp .content span {
+  //   background-color: red;
+  color: var(--white-color);
+  font-weight: 600;
+  --size: 2.2rem;
+  font-size: var(--size);
+  line-height: calc(var(--size) * 1.5);
+}
+
+@media (width >= 798px) {
+  .second-page-comp .content {
+    max-width: 60ch;
+  }
+  .second-page-comp .content span {
+    --size: 3.2rem;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,23 @@
+.burger-menu-btn-comp {
+  //   background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  svg {
+    pointer-events: none;
+  }
+  transition: all 0.2s ease;
+}
+
+.burger-menu-btn-comp:hover {
+  scale: 1.1;
+}
+
+.burger-menu-btn-comp:active {
+  scale: 0.9;
+  svg {
+    fill: var(--blue-color);
+  }
+}

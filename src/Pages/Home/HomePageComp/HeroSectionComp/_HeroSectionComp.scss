@@ -1,0 +1,60 @@
+.hero {
+  height: 95vh;
+  position: relative;
+}
+.hero .content {
+  position: absolute;
+  max-width: 600px;
+  width: 80%;
+  // background-color: red;
+  z-index: 1;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  //   border: 1px solid red;
+  overflow: hidden;
+
+  h1 {
+    transform: translateY(-200%);
+    font-size: 3.5rem;
+    line-height: calc(3.5rem * 1.2);
+  }
+
+  h2 {
+    transform: translateY(-200%);
+  }
+  p {
+    transform: translateY(-200%);
+  }
+}
+
+@media (width >= 798px) {
+  .hero .content {
+    h1 {
+      font-size: 3.5rem;
+      line-height: calc(3.5rem * 1.2);
+    }
+    h2 {
+      font-size: 2.8rem;
+      line-height: calc(2.8rem * 1.2);
+    }
+    //   background-color: red;
+  }
+}
+@media (width >= 1000px) {
+  .hero .content {
+    h1 {
+      font-size: 5rem;
+      line-height: calc(5rem * 1.2);
+    }
+    h2 {
+      font-size: 3.5rem;
+      line-height: calc(3.5rem * 1.2);
+    }
+    //   background-color: red;
+  }
+}
+
+.hero video {
+  height: 100%;
+}

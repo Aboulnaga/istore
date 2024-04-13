@@ -1,0 +1,118 @@
+.third-section-comp {
+  position: relative;
+  background-color: red;
+  height: 100vh;
+}
+
+.third-section-comp .container {
+  height: 100%;
+}
+
+.third-section-comp .container > p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: var(--black-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  width: max-content;
+  opacity: 0;
+  position: relative;
+  z-index: -1;
+}
+
+.third-section-comp .content {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+
+  p {
+    color: var(--black-color);
+    font-size: clip(1rem, 0.8rem, 0.9rem);
+  }
+
+  .size {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: calc(1.4rem * 1.5);
+  }
+}
+
+.third-section-comp .content .left {
+  position: relative;
+  //   right: 100px;
+  right: 0;
+  opacity: 0;
+  max-width: 9ch;
+  p {
+    width: fit-content;
+  }
+}
+.third-section-comp .content .right {
+  position: relative;
+  max-width: 9ch;
+  //   left: 105px;
+  left: 0;
+  opacity: 0;
+  p {
+    width: fit-content;
+  }
+}
+
+.third-section-comp .images img {
+  position: absolute;
+  top: 50%;
+  //   max-width: 160px;
+  width: 30%;
+}
+.third-section-comp .images img:nth-child(1) {
+  left: calc(50% - 10px);
+  //   left: calc(50%);
+  transform: translate(-60%, -50%);
+}
+
+.third-section-comp .images img:nth-child(2) {
+  right: calc(50% - 10px);
+  //   right: calc(50%);
+  transform: translate(60%, -50%);
+  scale: 0.9;
+}
+
+@media (width >= 900px) {
+  .third-section-comp .container {
+    height: 120vh;
+  }
+
+  //   .third-section-comp .container > p {
+  //     bottom: 15%;
+  //   }
+
+  .third-section-comp .content .left {
+    max-width: max-content;
+    right: 280px;
+  }
+  .third-section-comp .content .right {
+    max-width: max-content;
+    left: 230px;
+  }
+
+  .third-section-comp .images img {
+    max-width: 320px;
+  }
+
+  .third-section-comp .images img:nth-child(1) {
+    left: calc(50% - 50px);
+    transform: translate(-50%, -50%);
+  }
+
+  .third-section-comp .images img:nth-child(2) {
+    right: calc(50% - 50px);
+    transform: translate(50%, -50%);
+    scale: 0.9;
+  }
+}

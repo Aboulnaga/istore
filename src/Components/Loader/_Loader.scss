@@ -1,0 +1,31 @@
+.loader-comp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+  }
+
+  svg {
+    fill: var(--primary-color);
+    width: 100px;
+    height: 100px;
+  }
+
+  animation: loader 1s ease-in-out infinite alternate;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
